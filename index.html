@@ -1,0 +1,36 @@
+<body>
+  <canvas id='canvas' width='300px' height='300px'></canvas>
+
+  <br/>
+  <a id='run' href='#'> >>> [ Run ] <<< </a>
+  <br/><br/>
+
+  <div>Secondary Line Frequency</div>
+  <input id='second_line_freq' type='number' value=0.8></input>
+  <div> - - between 0.0 and 1.0, determines how many secondary-layer lines are created</div>
+  <br/>
+
+  <div>Secondary Line Min Range</div>
+  <input id='second_line_min' type='number' value=0.8></input>
+  <div> - - between 0.0 and 1.0, determines how far from center the program will be before drawing any secondary circles</div>
+  <br/>
+
+  <div>Secondary Line Max Range</div>
+  <input id='second_line_max' type='number' value=1.0></input>
+  <div> - - between 0.0 and 1.0, determines how far from center the program will be when it stops rendering larger secondary circles</div>
+  <div> NOTE: the 2 settings above operate linearly but the program is exponential, so you wont see much difference with any values below 0.5-ish</div>
+  <br/>
+
+  <div>Middle Hole Density</div>
+  <input id='hole_fill' type='number' value=.2></input>
+  <div> - - between 0.0 and 1.0, higher density raises the amount of lines generated at the center point</div>
+  <br/>
+
+  <div>Secondary Line Location</div>
+  <input name='second_line_layer' type='radio' onclick='second_line_layer=1' >Back</input>
+  <input name='second_line_layer' type='radio' onclick='second_line_layer=0' checked='checked'>Front</input>
+  <br/>
+
+
+  <script src='script.js' type='text/javascript'></script>
+</body>
