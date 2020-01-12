@@ -4,31 +4,48 @@
   <br/>
   <a id='run' href='#'> >>> [ Run ] <<< </a>
   <br/><br/>
+  <div style='font-weight: bold'> NOTE: Values outside the provided ranges are acceptable, but may cause sluggishness and/or render weirdly</div><br/>
+  <div style='font-weight: bold'>   Also, the code differs slightly for first and second layer, so the values won't respond exactly the same on both. You might need to crank the values for second layer to get anything to change.</div>
+  <br/>
 
-  <div>Secondary Line Frequency</div>
+  <div>Line Widths (First and Second Layer)</div>
+  <input id='first_line_width' type='number' value=10></input>
+  <input id='second_line_width' type='number' value=10></input>
+  <div> - - anything above 0, width of lines</div>
+  <br/>
+
+  <div>Line Frequencies (First and Second)</div>
+  <input id='first_line_freq' type='number' value=1.0></input>
   <input id='second_line_freq' type='number' value=0.8></input>
-  <div> - - between 0.0 and 1.0, determines how many secondary-layer lines are created</div>
+  <div> - - between 0.0 and 1.0, determines how manylines are created per-layer</div>
   <br/>
 
-  <div>Secondary Line Min Range</div>
+  <div>First Line Range (min and max)</div>
+  <input id='first_line_min' type='number' value=0.0></input>
+  <input id='first_line_max' type='number' value=1.0></input>
+  <div> - - between 0.0 and 1.0, determines how close/far to center the program will draw Primary circles</div>
+  <br/>
+
+  <div>Secondary Line Range (min and max)</div>
   <input id='second_line_min' type='number' value=0.8></input>
-  <div> - - between 0.0 and 1.0, determines how far from center the program will be before drawing any secondary circles</div>
-  <br/>
-
-  <div>Secondary Line Max Range</div>
   <input id='second_line_max' type='number' value=1.0></input>
-  <div> - - between 0.0 and 1.0, determines how far from center the program will be when it stops rendering larger secondary circles</div>
-  <div> NOTE: the 2 settings above operate linearly but the program is exponential, so you wont see much difference with any values below 0.5-ish</div>
+  <div> - - between 0.0 and 1.0, determines how close/far to center the program will draw Secondary circles</div>
   <br/>
 
-  <div>Middle Hole Density</div>
-  <input id='hole_fill' type='number' value=.2></input>
+  <div>Middle Hole Density (first and second)</div>
+  <input id='first_hole_fill' type='number' value=.2></input>
+  <input id='second_hole_fill' type='number' value=.2></input>
   <div> - - between 0.0 and 1.0, higher density raises the amount of lines generated at the center point</div>
   <br/>
 
   <div>Secondary Line Location</div>
   <input name='second_line_layer' type='radio' onclick='second_line_layer=1' >Back</input>
   <input name='second_line_layer' type='radio' onclick='second_line_layer=0' checked='checked'>Front</input>
+  <br/><br/>
+
+  <div>BG color</div>
+  <input name='bg' type='radio' onclick='bg=1' >BLACK</input>
+  <input name='bg' type='radio' onclick='bg=0' checked='checked'>WHITE</input>
   <br/>
 
 
